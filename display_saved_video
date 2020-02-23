@@ -1,0 +1,13 @@
+import cv2
+import numpy as np
+cap = cv2.VideoCapture(r'C:\Users\Welcome\Desktop\linevideo2.mp4')
+
+while(cap.isOpened()):
+#       # Capture frame-by-frame
+     ret, img = cap.read()
+     if ret == True:
+        cv2.imshow("contours1",img)
+     if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+cv2.destroyAllWindows()
