@@ -51,8 +51,10 @@ def linefollow():
             frame = cv2.circle(frame, (cX,cY), 10, (255,255,255),3) 
 
             cv2.imshow("contours1",frame)
+            err=cX-(frame.shape[0]/2)
+            print(err)
             #return(cX,cY)
-            print(cX,"and",cY)
+            #print(cX,"and",cY)
             
 
             if time.time()-a > 60 :
@@ -62,5 +64,5 @@ def linefollow():
         else: 
             break
     cv2.destroyAllWindows()
-    return(cX,cY)
+    #return(cX)
     linefollow()
