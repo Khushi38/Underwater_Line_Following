@@ -1,7 +1,11 @@
 import time
 import cv2
 import numpy as np
-
+prev_err =0 
+kp = 2; 
+kd = 2; 
+lthrust=1500
+rthrust=1500
 def linefollow():
     a = time.time()
     cap = cv2.VideoCapture(0)
