@@ -51,7 +51,7 @@ def linefollow():
             frame = cv2.circle(frame, (cX,cY), 10, (255,255,255),3) 
 
             cv2.imshow("contours1",frame)
-            err=cX-(frame.shape[0]/2)
+            err=cX-(width/2)
             #print(err)
             global prev_err
             derr = err - prev_err;
